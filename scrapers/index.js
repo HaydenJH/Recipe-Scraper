@@ -30,24 +30,26 @@ const domains = {
   thespruceeats: require("./thespruceeats"),
   whatsgabycooking: require("./whatsgabycooking"),
   woolworths: require("./woolworths.js"),
-  yummly: require("./yummly")
+  yummly: require("./yummly"),
 };
 
-const recipeScraper = url => {
+const recipeScraper = (url) => {
   let domain = parseDomain(url).domain;
   return new Promise((resolve, reject) => {
     // First try parse the schema.org schema
-    schemaOrgParser(url).then((recipe)=>{
-      resolve(recipe)
-    }).catch(()=>{
-      // Fall back to specific scraper
-      if (domains[domain] !== undefined) {
-        resolve(domains[domain](url));
-      } else {
-        reject(new Error("Site not yet supported"));
+    schemaOrgParser(url).then(
+      (recipe) => {
+        resolve(recipe);
+      },
+      () => {
+        // Fall back to specific scraper
+        if (domains[domain] !== undefined) {
+          return resolve(domains[domain](url));
+        } else {
+          return reject(new Error("Site not yet supported"));
+        }
       }
-    })
- 
+    );
   });
 };
 
