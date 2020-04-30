@@ -53,6 +53,8 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://www.ambitiouskitchen.com/wp-content/uploads/2018/07/Street-Corn-Pasta-Salad-4.jpg"
+      "https://www.ambitiouskitchen.com/wp-content/uploads/2018/07/Street-Corn-Pasta-Salad-4.jpg",
+      aggregateRating: null,
+      recipeCuisine: []
   }
 };

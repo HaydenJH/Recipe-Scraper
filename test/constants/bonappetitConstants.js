@@ -35,6 +35,8 @@ module.exports = {
     },
     servings: "4 servings",
     image:
-      "https://assets.bonappetit.com/photos/5d4b5b3cecc81500091c6835/16:9/w_1200,c_limit/0919-Soba-Noodles.jpg"
+      "https://assets.bonappetit.com/photos/5d4b5b3cecc81500091c6835/16:9/w_1200,c_limit/0919-Soba-Noodles.jpg",
+      aggregateRating: null,
+      recipeCuisine: []
   }
 };

@@ -1,4 +1,5 @@
 const parseDomain = require("parse-domain");
+const schemaOrgParser = require("./schemaOrg");
 
 const domains = {
   "101cookbooks": require("./101cookbooks"),
@@ -35,11 +36,18 @@ const domains = {
 const recipeScraper = url => {
   let domain = parseDomain(url).domain;
   return new Promise((resolve, reject) => {
-    if (domains[domain] !== undefined) {
-      resolve(domains[domain](url));
-    } else {
-      reject(new Error("Site not yet supported"));
-    }
+    // First try parse the schema.org schema
+    schemaOrgParser(url).then((recipe)=>{
+      resolve(recipe)
+    }).catch(()=>{
+      // Fall back to specific scraper
+      if (domains[domain] !== undefined) {
+        resolve(domains[domain](url));
+      } else {
+        reject(new Error("Site not yet supported"));
+      }
+    })
+ 
   });
 };
 

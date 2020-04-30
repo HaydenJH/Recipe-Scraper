@@ -47,6 +47,8 @@ module.exports = {
     },
     servings: "8 spring rolls",
     image:
-      "https://cookieandkate.com/images/2019/08/fresh-spring-rolls-recipe-4.jpg"
+      "https://cookieandkate.com/images/2019/08/fresh-spring-rolls-recipe-4.jpg",
+      aggregateRating: null,
+      recipeCuisine: []
   }
 };

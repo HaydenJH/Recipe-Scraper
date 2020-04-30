@@ -29,6 +29,8 @@ module.exports = {
     },
     servings: "Serves 2",
     image:
-      "https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/sausage_and_gnocchi_bake_80924_16x9.jpg"
+      "https://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/sausage_and_gnocchi_bake_80924_16x9.jpg",
+      aggregateRating: null,
+      recipeCuisine: []
   }
 };

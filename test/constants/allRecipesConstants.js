@@ -60,6 +60,8 @@ module.exports = {
     },
     servings: "8",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1061355.jpg"
+      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1061355.jpg",
+      aggregateRating: null,
+      recipeCuisine: []
   }
 };

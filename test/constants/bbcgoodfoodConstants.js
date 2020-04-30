@@ -30,6 +30,8 @@ module.exports = {
     },
     servings: "Makes 12",
     image:
-      "https://www.bbcgoodfood.com/sites/default/files/recipe_images/recipe-image-legacy-id--856543_10.jpg"
+      "https://www.bbcgoodfood.com/sites/default/files/recipe_images/recipe-image-legacy-id--856543_10.jpg",
+    aggregateRating: null,
+    recipeCuisine: []
   }
 };

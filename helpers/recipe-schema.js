@@ -6,12 +6,14 @@ function Recipe() {
     prep: "",
     cook: "",
     active: "",
-    inactive: "",
+    inactive: "", 
     ready: "",
     total: ""
   };
   this.servings = "";
   this.image = "";
+  this.aggregateRating = null;
+  this.recipeCuisine = []
 }
 
 module.exports = Recipe;

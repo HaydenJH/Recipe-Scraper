@@ -10,7 +10,7 @@ module.exports = {
       "3 ribs celery (about 1/4 bunch)",
       "1 jalapenño",
       "4 cloves garlic",
-      "2 Tbsp olive oil",
+      "2 Tbsp olive oil", 
       "1 boneless, skinless chicken breast (about 3/4 lb.)",
       "6 cups chicken broth*",
       "2 10oz. cans diced tomatoes with green chiles (Rotel)",
@@ -36,6 +36,8 @@ module.exports = {
     },
     servings: "6",
     image:
-      "https://www.budgetbytes.com/wp-content/uploads/2012/10/Chicken-and-Lime-Soup-above.jpg"
+      "https://www.budgetbytes.com/wp-content/uploads/2012/10/Chicken-and-Lime-Soup-above.jpg",
+      aggregateRating: null,
+      recipeCuisine: []
   }
 };
