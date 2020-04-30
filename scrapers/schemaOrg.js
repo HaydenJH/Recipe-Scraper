@@ -24,11 +24,12 @@ const schemaOrg = (url) => {
               parsed["@graph"] &&
               Array.isArray(parsed["@graph"]) &&
               parsed["@graph"].find((g) => g["@type"] === "Recipe")
-            )
+            ){
               recipeSchemaRecipe = parsed["@graph"].find(
                 (g) => g["@type"] === "Recipe"
               );
               return false;
+            }
           } catch {
             // Swallow error
           }
