@@ -41,7 +41,7 @@ const schemaOrg = (url) => {
         Recipe.image =
           recipeSchemaRecipe.image && Array.isArray(recipeSchemaRecipe.image)
             ? recipeSchemaRecipe.image[0]
-            : null;
+            : recipeSchemaRecipe.image;
         Recipe.name = recipeSchemaRecipe.name;
         Recipe.servings = recipeSchemaRecipe.recipeYield;
         // todo parse these out "PT5M" -> minutes?
@@ -52,11 +52,18 @@ const schemaOrg = (url) => {
         Recipe.recipeCuisine = recipeSchemaRecipe.recipeCuisine;
         if (recipeSchemaRecipe.recipeInstructions) {
           recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
-            Recipe.instructions.push(ri.text);
+            if (typeof ri === "string") {
+              Recipe.instructions.push(ri);
+            }
+            if (ri.text) {
+              Recipe.instructions.push(ri.text);
+            }
           });
         }
         Recipe.aggregateRating = recipeSchemaRecipe.aggregateRating;
-        delete Recipe.aggregateRating["@type"];
+        if (Recipe.aggregateRating) {
+          delete Recipe.aggregateRating["@type"];
+        }
         if (
           !Recipe.name ||
           !Recipe.ingredients.length ||
