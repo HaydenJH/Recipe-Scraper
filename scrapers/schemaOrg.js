@@ -71,31 +71,32 @@ const schemaOrg = (url) => {
         }
         if (recipeSchemaRecipe.recipeInstructions) {
           if (Array.isArray(recipeSchemaRecipe.recipeInstructions)) {
-            recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
-              if (typeof ri === "string") {
-                Recipe.instructions.push(ri);
-              }
-              if (ri.text) {
-                Recipe.instructions.push(ri.text);
-              }
-            });
+            if (
+              recipeSchemaRecipe.recipeInstructions.some(
+                (ri) => ri.itemListElement && Array.isArray(ri.itemListElement)
+              )
+            ) {
+              recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
+                if (ri.itemListElement && Array.isArray(ri.itemListElement)) {
+                  ri.itemListElement.forEach((ile) => {
+                    Recipe.instructions.push(ile.text);
+                  });
+                }
+              });
+            } else {
+              recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
+                if (typeof ri === "string") {
+                  Recipe.instructions.push(ri);
+                }
+                if (ri.text) {
+                  Recipe.instructions.push(ri.text);
+                }
+              });
+            }
           } else if (
             typeof recipeSchemaRecipe.recipeInstructions === "string"
           ) {
             Recipe.instructions.push(recipeSchemaRecipe.recipeInstructions);
-          } else if (
-            Array.isArray(recipeSchemaRecipe.recipeInstructions) &&
-            recipeSchemaRecipe.recipeInstructions.some(
-              (ri) => ri.itemListElement && Array.isArray(ri.itemListElement)
-            )
-          ) {
-            recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
-              if (ri.itemListElement && Array.isArray(ri.itemListElement)) {
-                ri.itemListElement.forEach((ile) => {
-                  Recipe.instructions.push(ile.text);
-                });
-              }
-            });
           }
         }
 
