@@ -57,14 +57,20 @@ const schemaOrg = (url) => {
         Recipe.ingredients = recipeSchemaRecipe.recipeIngredient;
         Recipe.recipeCuisine = recipeSchemaRecipe.recipeCuisine;
         if (recipeSchemaRecipe.recipeInstructions) {
-          recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
-            if (typeof ri === "string") {
-              Recipe.instructions.push(ri);
-            }
-            if (ri.text) {
-              Recipe.instructions.push(ri.text);
-            }
-          });
+          if (Array.isArray(recipeSchemaRecipe.recipeInstructions)) {
+            recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
+              if (typeof ri === "string") {
+                Recipe.instructions.push(ri);
+              }
+              if (ri.text) {
+                Recipe.instructions.push(ri.text);
+              }
+            });
+          } else if (
+            typeof recipeSchemaRecipe.recipeInstructions === "string"
+          ) {
+            Recipe.instructions.push(recipeSchemaRecipe.recipeInstructions);
+          }
         }
         Recipe.aggregateRating = recipeSchemaRecipe.aggregateRating;
         if (Recipe.aggregateRating) {
