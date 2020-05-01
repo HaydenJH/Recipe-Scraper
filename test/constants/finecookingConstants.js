@@ -19,12 +19,12 @@ module.exports = {
       "3 Tbs. fresh lime juice",
       "1/4 cup sour cream",
       "1 Hass avocado, peeled, pitted, and roughly chopped",
-      "1 to 2 Tbs. chopped fresh cilantro"
+      "1 to 2 Tbs. chopped fresh cilantro",
     ],
     instructions: [
       "In a large pot or Dutch oven, combine the chicken with 4 cups water and 1 tsp. salt. Partially cover, bring to a simmer, and cook until an instant-read thermometer inserted into the chicken registers 165°F, 10 to 12 minutes. Transfer the chicken and its cooking broth to a large bowl.",
       "In the same pot, heat the oil over medium-high heat. Add the onion and jalapeño, and cook, stirring occasionally, until tender, about 5 minutes. Add the garlic, oregano, and cumin, and cook, stirring, until fragrant, about 30 seconds. Add the beans, and mash about half with a potato masher. Add enough of the reserved broth to cover. Stir in the chiles and 1 tsp. salt, and bring to a boil. Reduce the heat to a simmer.",
-      "Chop the chicken, discarding any excess fat, and add to the bean mixture. Add broth to thin the chili, if you like, and then warm through over medium-low heat. Remove from the heat, stir in the lime juice and sour cream, and season to taste with salt. Serve topped with the avocado and cilantro."
+      "Chop the chicken, discarding any excess fat, and add to the bean mixture. Add broth to thin the chili, if you like, and then warm through over medium-low heat. Remove from the heat, stir in the lime juice and sour cream, and season to taste with salt. Serve topped with the avocado and cilantro.",
     ],
     time: {
       prep: "",
@@ -32,10 +32,12 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "",
     },
     servings: "6",
     image:
-      "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2019/08/20135635/white-chicken-chili_wide.jpg"
-  }
+      "https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2019/08/20135635/white-chicken-chili_wide.jpg",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

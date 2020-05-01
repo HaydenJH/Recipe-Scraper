@@ -24,7 +24,7 @@ module.exports = {
       "4 cups cauliflower florets",
       "1 bunch dinosaur kale thinly sliced",
       "1 tablespoon olive oil",
-      "1 recipe Homemade Guacamole"
+      "1 recipe Homemade Guacamole",
     ],
     instructions: [
       "For the Black Beans",
@@ -34,7 +34,7 @@ module.exports = {
       "For the Cauliflower rice",
       "Make sure your cauliflower is fully dry. Place the cauliflower in a food processor and pulse until it has the texture of rice. Work in batches and don’t over process or it will get mushy. In a large skillet, heat 1 tablespoons of olive oil over medium heat. Add the kale and sauté until wilted. Add the cauliflower and saute, until heated through, about 5 minutes. Season with salt, pepper and a squeeze of lemon juice to help remove any bitterness from the raw cauliflower.",
       "Assembly",
-      "Portion the Cauliflower rice into 4 serving bowls. Add a spoonful of the beans to each bowl and a spoonful of the roasted sweet potatoes. Top with plenty of guacamole and serve."
+      "Portion the Cauliflower rice into 4 serving bowls. Add a spoonful of the beans to each bowl and a spoonful of the roasted sweet potatoes. Top with plenty of guacamole and serve.",
     ],
     time: {
       prep: "5 minutes",
@@ -42,10 +42,12 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: "50 minutes"
+      total: "50 minutes",
     },
     servings: "6",
     image:
-      "https://cdn.whatsgabycooking.com/wp-content/uploads/2018/02/WGC-Instant-Pot-Bowl-copy-2.jpg"
-  }
+      "https://cdn.whatsgabycooking.com/wp-content/uploads/2018/02/WGC-Instant-Pot-Bowl-copy-2.jpg",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

@@ -14,7 +14,7 @@ module.exports = {
       "1 lemon ",
       "150 milliliters creme fraiche (or sour cream)",
       "7 grams gelatin powder (unflavored)",
-      "200 grams mango (puree)"
+      "200 grams mango (puree)",
     ],
     instructions: [
       "Using a blender, smash the cookies into pieces, add the diced butter and mix, pulsing  to incorporate.",
@@ -28,7 +28,7 @@ module.exports = {
       "Blend into the remaining mango purée  mixing with a fork and add into the cream cheese mixture while beating continuously.",
       "Fill the cookie molds with this mixture.",
       "Let it cool overnight in the refrigerator.",
-      "To unmold, pass a hot knife blade along the sides of the circle."
+      "To unmold, pass a hot knife blade along the sides of the circle.",
     ],
     time: {
       prep: "",
@@ -36,10 +36,12 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: "35 Minutes"
+      total: "35 Minutes",
     },
     servings: "4",
     image:
-      "https://www.yummly.com/images/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-recipe-781945"
-  }
+      "https://www.yummly.com/images/No-Bake-Lemon-Mango-Cheesecakes-with-Speculoos-crust-recipe-781945",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

@@ -21,7 +21,7 @@ module.exports = {
       "1 cup corn, frozen",
       "Dash of Cayenne (optional)",
       "Salt and pepper, to taste",
-      "Optional: Diced avocado, chopped cilantro, shredded cheese, sour cream or Greek yogurt and/or lime wedges for serving"
+      "Optional: Diced avocado, chopped cilantro, shredded cheese, sour cream or Greek yogurt and/or lime wedges for serving",
     ],
     instructions: [
       "Stovetop Directions:",
@@ -31,7 +31,7 @@ module.exports = {
       "Follow directions for the Stovetop version through Step 1.",
       "Add turkey and vegetable mixture to slow cooker.",
       "Add remaining ingredients (except salt and pepper) and stir to combine.",
-      "Cook on LOW for 8 hours or on HIGH for 4 hours."
+      "Cook on LOW for 8 hours or on HIGH for 4 hours.",
     ],
     time: {
       prep: "15 mins",
@@ -39,10 +39,12 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: "40 mins"
+      total: "40 mins",
     },
     servings: "6",
     image:
-      "https://therealfoodrds.com/wp-content/uploads/2017/10/IMG_9397-2-e1508438046925.jpg"
-  }
+      "https://therealfoodrds.com/wp-content/uploads/2017/10/IMG_9397-2-e1508438046925.jpg",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

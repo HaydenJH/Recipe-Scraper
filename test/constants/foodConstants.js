@@ -19,7 +19,7 @@ module.exports = {
       "2 teaspoons vanilla",
       "Then stir in",
       "3 cups oats (not instant)",
-      "1 1⁄2 cups raisins"
+      "1 1⁄2 cups raisins",
     ],
     instructions: [
       "Preheat oven to 350°.",
@@ -31,7 +31,7 @@ module.exports = {
       "Fill a #40 cookie scoop and press against side of bowl, pulling up to level dough (to measure 2 tablespoons of dough).",
       "Drop 2-inches apart onto baking sheet sprayed with nonstick spray.",
       "Bake 11-13 minutes (on center rack), until golden, but still moist beneath cracks on top.",
-      "Remove from oven; let cookies sit on baking sheet for 2 minutes before transferring to a wire rack to cool."
+      "Remove from oven; let cookies sit on baking sheet for 2 minutes before transferring to a wire rack to cool.",
     ],
     time: {
       prep: "",
@@ -39,10 +39,12 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: "26mins"
+      total: "26mins",
     },
     servings: "",
     image:
-      "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/35/81/3/KU3JVxMDRriISEG3KdPy_0S9A9740.jpg"
-  }
+      "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/35/81/3/KU3JVxMDRriISEG3KdPy_0S9A9740.jpg",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

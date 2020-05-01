@@ -27,14 +27,14 @@ module.exports = {
       "1 teaspoon fresh lemon juice (from 1 lemon)",
       "1/4 teaspoon kosher salt",
       "1/4 teaspoon black pepper",
-      "1/4 teaspoon granulated sugar"
+      "1/4 teaspoon granulated sugar",
     ],
     instructions: [
       "Stir together oil, Worcestershire, tamari, lemon zest, thyme, Sriracha, and garlic in a medium bowl. Place steak in a 13- x 9-inch baking dish or a gallon-sized plastic ziplock bag; pour marinade over steak to fully coat. Cover, and let marinate at least 2 hours or up to overnight in refrigerator, turning occasionally. ",
       "Preheat broiler to HIGH with an oven rack 6 to 8 inches from heat. Line a large rimmed baking sheet with aluminum foil. Toss together potatoes, 1 tablespoon of the oil, 1 teaspoon of the salt, and 1/2 teaspoon of the pepper. Spread in an even layer on prepared baking sheet. Broil until starting to blister, about 5 minutes. ",
       "Remove steak from marinade. Pat dry; discard marinade. Place steak in center of prepared baking sheet, and arrange blistered potatoes around steak. Sprinkle steak with 1/4 teaspoon each of the salt and pepper. Broil 3 minutes. ",
       "Toss together broccoli, and remaining 2 tablespoons oil, 1/4 teaspoon salt, and 1/4 teaspoon pepper. Arrange broccoli around steak, and broil until potatoes are fork tender, broccoli is charred and tender, and a thermometer inserted into the thickest part of steak registers 125°F, 5 to 8 minutes. Let steak rest 10 minutes before thinly slicing against the grain. ",
-      "While steak rests, prepare the aioli: Stir together mayonnaise, roasted garlic, lemon juice, salt, pepper, and sugar in a small bowl. Serve sliced London broil and vegetables with aioli. "
+      "While steak rests, prepare the aioli: Stir together mayonnaise, roasted garlic, lemon juice, salt, pepper, and sugar in a small bowl. Serve sliced London broil and vegetables with aioli. ",
     ],
     time: {
       prep: "",
@@ -42,11 +42,13 @@ module.exports = {
       active: "30 Mins",
       inactive: "",
       ready: "",
-      total: "2 Hours 30 Mins"
+      total: "2 Hours 30 Mins",
     },
     servings:
       "Serves 4 (serving size: about 4 oz. steak, 3/4 cup potatoes, 1/2 cup broccoli, and 2 Tbsp. aioli)",
     image:
-      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Flondonbroil.jpg%3Fitok%3Dea0rwT73"
-  }
+      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Flondonbroil.jpg%3Fitok%3Dea0rwT73",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

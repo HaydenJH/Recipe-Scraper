@@ -12,7 +12,7 @@ module.exports = {
       "1/4 teaspoon salt",
       "1/8 teaspoon ground black pepper",
       "1 tablespoon fresh parsley (chopped)",
-      "Garnish: lemon wedges"
+      "Garnish: lemon wedges",
     ],
     instructions: [
       "Gather the ingredients.",
@@ -26,7 +26,7 @@ module.exports = {
       "Thread tentacles onto separate skewers.",
       "Grill over high heat, turning once, until just opaque throughout, about 1 to 2 minutes.",
       "Remove squid from skewers and pile on a platter. Sprinkle with parsley and serve with lemon wedges.",
-      "Serve and enjoy!"
+      "Serve and enjoy!",
     ],
     time: {
       prep: "20 mins",
@@ -34,10 +34,12 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: "25 mins"
+      total: "25 mins",
     },
     servings: "1 pound (4 servings)",
     image:
-      "https://www.thespruceeats.com/thmb/hbRXYt8onovguH2qKiAAKu3zcUk=/2309x1299/filters:fill(auto,1)/GettyImages-635101877-5955ee1c5f9b5815d9ce05f2.jpg"
-  }
+      "https://www.thespruceeats.com/thmb/hbRXYt8onovguH2qKiAAKu3zcUk=/2309x1299/filters:fill(auto,1)/GettyImages-635101877-5955ee1c5f9b5815d9ce05f2.jpg",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };

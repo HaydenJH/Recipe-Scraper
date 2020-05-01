@@ -1,5 +1,5 @@
 const parseDomain = require("parse-domain");
-const schemaOrgParser = require("./schemaOrg");
+const schemaOrg = require("./schemaOrg");
 
 const domains = {
   "101cookbooks": require("./101cookbooks"),
@@ -37,7 +37,7 @@ const recipeScraper = (url) => {
   let domain = parseDomain(url).domain;
   return new Promise((resolve, reject) => {
     // First try parse the schema.org schema
-    schemaOrgParser(url).then(
+    schemaOrg(url).then(
       (recipe) => {
         resolve(recipe);
       },

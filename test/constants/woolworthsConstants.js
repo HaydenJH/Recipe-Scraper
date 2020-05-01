@@ -15,7 +15,7 @@ module.exports = {
       "6 ripe cherry tomatoes",
       "2 limes",
       "Pantry Staples",
-      "extra virgin olive oil"
+      "extra virgin olive oil",
     ],
     instructions: [
       "Peel the onion and deseed 1 chilli, then roughly chop it all on a large board.",
@@ -25,7 +25,7 @@ module.exports = {
       "Squeeze in the juice from 1 lime and 1 tablespoon of oil, then season to taste with sea salt, black pepper and more lime juice, if needed.",
       "Deseed, finely chop and scatter over the remaining chilli if you like more of a kick.",
       "Pick over the reserved coriander leaves, then serve.",
-      "Super-quick and easy, this guacamole recipe is delicious with fajitas, quesadillas, dolloped into a wrap or served as a snack with crunchy veggies."
+      "Super-quick and easy, this guacamole recipe is delicious with fajitas, quesadillas, dolloped into a wrap or served as a snack with crunchy veggies.",
     ],
     time: {
       prep: "15",
@@ -33,8 +33,10 @@ module.exports = {
       active: "",
       inactive: "",
       ready: "",
-      total: ""
+      total: "",
     },
-    servings: "8"
-  }
+    servings: "8",
+    aggregateRating: null,
+    recipeCuisine: [],
+  },
 };
