@@ -23,7 +23,7 @@ const schemaOrg = (url) => {
               parsed &&
               parsed["@graph"] &&
               Array.isArray(parsed["@graph"]) &&
-              parsed["@graph"].find((g) => g["@type"] === "Recipe")
+              parsed["@graph"].find((g) => g["@type"] === "Recipe") != null
             ) {
               recipeSchemaRecipe = parsed["@graph"].find(
                 (g) => g["@type"] === "Recipe"
@@ -44,10 +44,17 @@ const schemaOrg = (url) => {
         if (recipeSchemaRecipe == null) {
           return reject(new Error("No recipe found on page"));
         }
-        Recipe.image =
-          recipeSchemaRecipe.image && Array.isArray(recipeSchemaRecipe.image)
-            ? recipeSchemaRecipe.image[0]
-            : recipeSchemaRecipe.image;
+        if (recipeSchemaRecipe.image) {
+          if (Array.isArray(recipeSchemaRecipe.image)) {
+            Recipe.image = recipeSchemaRecipe.image[0];
+          } else if (recipeSchemaRecipe.image.url) {
+            Recipe.image = recipeSchemaRecipe.image.url;
+          } else {
+            Recipe.image = recipeSchemaRecipe.image;
+          }
+        }
+
+        Recipe.nutrition = recipeSchemaRecipe.nutrition;
         Recipe.name = recipeSchemaRecipe.name;
         Recipe.servings = recipeSchemaRecipe.recipeYield;
         // todo parse these out "PT5M" -> minutes?
@@ -55,7 +62,13 @@ const schemaOrg = (url) => {
         Recipe.time.cook = recipeSchemaRecipe.cookTime;
 
         Recipe.ingredients = recipeSchemaRecipe.recipeIngredient;
-        Recipe.recipeCuisine = recipeSchemaRecipe.recipeCuisine;
+        if (recipeSchemaRecipe.recipeCuisine) {
+          if (Array.isArray(recipeSchemaRecipe.recipeCuisine)) {
+            Recipe.recipeCuisine = recipeSchemaRecipe.recipeCuisine;
+          } else if (typeof recipeSchemaRecipe.recipeCuisine === "string") {
+            Recipe.recipeCuisine.push(recipeSchemaRecipe.recipeCuisine);
+          }
+        }
         if (recipeSchemaRecipe.recipeInstructions) {
           if (Array.isArray(recipeSchemaRecipe.recipeInstructions)) {
             recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
@@ -72,6 +85,15 @@ const schemaOrg = (url) => {
             Recipe.instructions.push(recipeSchemaRecipe.recipeInstructions);
           }
         }
+
+        if (recipeSchemaRecipe.recipeCategory) {
+          if (Array.isArray(recipeSchemaRecipe.recipeCategory)) {
+            Recipe.recipeCategory = recipeSchemaRecipe.recipeCategory;
+          } else if (typeof recipeSchemaRecipe.recipeCategory === "string") {
+            Recipe.recipeCategory.push(recipeSchemaRecipe.recipeCategory);
+          }
+        }
+
         Recipe.aggregateRating = recipeSchemaRecipe.aggregateRating;
         if (Recipe.aggregateRating) {
           delete Recipe.aggregateRating["@type"];
