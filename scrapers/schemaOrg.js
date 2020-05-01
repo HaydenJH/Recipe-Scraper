@@ -83,6 +83,19 @@ const schemaOrg = (url) => {
             typeof recipeSchemaRecipe.recipeInstructions === "string"
           ) {
             Recipe.instructions.push(recipeSchemaRecipe.recipeInstructions);
+          } else if (
+            Array.isArray(recipeSchemaRecipe.recipeInstructions) &&
+            recipeSchemaRecipe.recipeInstructions.some(
+              (ri) => ri.itemListElement && Array.isArray(ri.itemListElement)
+            )
+          ) {
+            recipeSchemaRecipe.recipeInstructions.forEach((ri) => {
+              if (ri.itemListElement && Array.isArray(ri.itemListElement)) {
+                ri.itemListElement.forEach((ile) => {
+                  Recipe.instructions.push(ile.text);
+                });
+              }
+            });
           }
         }
 
