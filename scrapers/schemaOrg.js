@@ -117,12 +117,16 @@ const schemaOrg = (url) => {
           !Recipe.ingredients.length ||
           !Recipe.instructions.length
         ) {
+          console.error(
+            `Recipe had no name, ingredients or instructions.  Recipe: ${Recipe}`
+          );
           return reject(new Error("No recipe found on page"));
         } else {
           resolve(Recipe);
         }
       } else {
-        reject(new Error("No recipe found on page"));
+        console.error(`Failed to load page at url: ${url}`);
+        reject(new Error("Failed to load page"));
       }
     });
   });
