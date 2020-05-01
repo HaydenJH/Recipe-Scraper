@@ -29,6 +29,12 @@ const schemaOrg = (url) => {
                 (g) => g["@type"] === "Recipe"
               );
               return false;
+            } else if (
+              parsed &&
+              Array.isArray(parsed) &&
+              parsed.find((p) => p["@type"] === "Recipe")
+            ) {
+              recipeSchemaRecipe = parsed.find((p) => p["@type"] === "Recipe");
             }
           } catch (e) {
             // Swallow error
@@ -36,7 +42,7 @@ const schemaOrg = (url) => {
         });
 
         if (recipeSchemaRecipe == null) {
-          reject(new Error("No recipe found on page"));
+          return reject(new Error("No recipe found on page"));
         }
         Recipe.image =
           recipeSchemaRecipe.image && Array.isArray(recipeSchemaRecipe.image)
@@ -69,7 +75,7 @@ const schemaOrg = (url) => {
           !Recipe.ingredients.length ||
           !Recipe.instructions.length
         ) {
-          reject(new Error("No recipe found on page"));
+          return reject(new Error("No recipe found on page"));
         } else {
           resolve(Recipe);
         }
