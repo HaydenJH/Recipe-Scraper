@@ -52,6 +52,10 @@ const schemaOrg = (url) => {
           } else {
             Recipe.image = recipeSchemaRecipe.image;
           }
+
+          if (Recipe.image.startsWith("/")) {
+            Recipe.image = `${response.request.uri}${Recipe.image}`;
+          }
         }
 
         Recipe.nutrition = recipeSchemaRecipe.nutrition;
