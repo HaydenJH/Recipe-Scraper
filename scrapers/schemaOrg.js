@@ -18,7 +18,7 @@ const schemaOrg = (url) => {
             let parsed = JSON.parse($(el).html());
             if (parsed && parsed["@type"] && parsed["@type"] === "Recipe") {
               recipeSchemaRecipe = parsed;
-              //  return false;
+              return false;
             } else if (
               parsed &&
               parsed["@graph"] &&
@@ -28,7 +28,7 @@ const schemaOrg = (url) => {
               recipeSchemaRecipe = parsed["@graph"].find(
                 (g) => g["@type"] === "Recipe"
               );
-              //return false;
+              return false;
             } else if (
               parsed &&
               Array.isArray(parsed) &&

@@ -34,7 +34,6 @@ const domains = {
 };
 
 const recipeScraper = (url) => {
-  let domain = parseDomain(url).domain;
   return new Promise((resolve, reject) => {
     // First try parse the schema.org schema
     schemaOrg(url).then(
@@ -42,6 +41,8 @@ const recipeScraper = (url) => {
         resolve(recipe);
       },
       () => {
+        let domain = parseDomain(url).domain;
+
         // Fall back to specific scraper
         if (domains[domain] !== undefined) {
           return resolve(domains[domain](url));
