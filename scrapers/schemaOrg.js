@@ -1,6 +1,6 @@
 const request = require("request");
 const cheerio = require("cheerio");
-
+const ISO8601ToString = require("../helpers/timeParsing");
 const RecipeSchema = require("../helpers/recipe-schema");
 
 const schemaOrg = (url) => {
@@ -61,9 +61,8 @@ const schemaOrg = (url) => {
         Recipe.nutrition = recipeSchemaRecipe.nutrition;
         Recipe.name = recipeSchemaRecipe.name;
         Recipe.servings = recipeSchemaRecipe.recipeYield;
-        // todo parse these out "PT5M" -> minutes?
-        Recipe.time.prep = recipeSchemaRecipe.prepTime;
-        Recipe.time.cook = recipeSchemaRecipe.cookTime;
+        Recipe.time.prep = ISO8601ToString(recipeSchemaRecipe.prepTime);
+        Recipe.time.cook = ISO8601ToString(recipeSchemaRecipe.cookTime);
 
         Recipe.ingredients = recipeSchemaRecipe.recipeIngredient;
         if (recipeSchemaRecipe.recipeCuisine) {
