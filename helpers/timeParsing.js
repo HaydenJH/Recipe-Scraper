@@ -13,7 +13,8 @@ function ISO8601ToString(iso8601Duration) {
   }
 
   if (hours != null && Number(hours) > 0) {
-    duration += `${Number(hours)} hours `;
+    let amount = Number(hours);
+    duration += `${amount} ${amount !== 1 ? "hours" : "hour"} `;
   }
 
   if (minutes != null && Number(minutes) > 0) {

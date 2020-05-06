@@ -54,7 +54,7 @@ const schemaOrg = (url) => {
           }
 
           if (Recipe.image.startsWith("/")) {
-            Recipe.image = `${response.request.uri}${Recipe.image}`;
+            Recipe.image = `${response.request.uri.hostname}${Recipe.image}`;
           }
         }
 
