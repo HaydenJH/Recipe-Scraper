@@ -52,7 +52,9 @@ const schemaOrg = (url) => {
           } else {
             Recipe.image = recipeSchemaRecipe.image;
           }
-
+          if (Recipe.image.url) {
+            Recipe.image = Recipe.image.url;
+          }
           if (Recipe.image.startsWith("/")) {
             Recipe.image = `${response.request.uri.hostname}${Recipe.image}`;
           }
